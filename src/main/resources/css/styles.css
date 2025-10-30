@@ -1,0 +1,126 @@
+/* Main Application Styles */
+
+.root {
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f4f4f4;
+}
+
+/* Control Panel Styles */
+
+.control-panel {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 0 1 0 0;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.info-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #0066cc;
+}
+
+/* Button Styles */
+
+.button {
+    -fx-background-color: #0066cc;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #0052a3;
+}
+
+.button:pressed {
+    -fx-background-color: #003d7a;
+}
+
+.button:disabled {
+    -fx-background-color: #cccccc;
+    -fx-text-fill: #666666;
+    -fx-opacity: 0.6;
+}
+
+/* Text Field Styles */
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-padding: 5;
+}
+
+.text-field:focused {
+    -fx-border-color: #0066cc;
+    -fx-border-width: 2;
+}
+
+/* ListView Styles */
+
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3;
+}
+
+.list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #333333;
+    -fx-padding: 5;
+}
+
+.list-cell:selected {
+    -fx-background-color: #0066cc;
+    -fx-text-fill: white;
+}
+
+.list-cell:hover {
+    -fx-background-color: #e6f2ff;
+}
+
+/* Visualization Area Styles */
+
+.visualization-area {
+    -fx-background-color: #2d2d2d;
+}
+
+.canvas-container {
+    -fx-background-color: #1a1a1a;
+}
+
+/* Status Bar Styles */
+
+.status-bar {
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Menu Bar Styles */
+
+.menu-bar {
+    -fx-background-color: #f9f9f9;
+}
+
+.menu-item {
+    -fx-padding: 5 20 5 20;
+}
+
+.menu-item:hover {
+    -fx-background-color: #e6f2ff;
+}
+
+/* Separator Styles */
+
+.separator {
+    -fx-padding: 5 0 5 0;
+}
