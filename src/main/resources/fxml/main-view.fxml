@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.sumo.trafficgui.controller.MainController"
+            prefHeight="720.0" prefWidth="1280.0">
+    
+    <!-- Top Menu Bar -->
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Load Configuration..."/>
+                <MenuItem text="Save Configuration..."/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Exit"/>
+            </Menu>
+            <Menu text="Simulation">
+                <MenuItem text="Settings..."/>
+                <MenuItem text="Reset"/>
+            </Menu>
+            <Menu text="View">
+                <MenuItem text="Zoom In"/>
+                <MenuItem text="Zoom Out"/>
+                <MenuItem text="Reset View"/>
+            </Menu>
+            <Menu text="Help">
+                <MenuItem text="Documentation"/>
+                <MenuItem text="About"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    
+    <!-- Left Control Panel -->
+    <left>
+        <VBox spacing="10" prefWidth="300" styleClass="control-panel">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            
+            <!-- Connection Section -->
+            <Label text="Connection Settings" styleClass="section-title"/>
+            <Separator/>
+            
+            <Label text="SUMO Executable:"/>
+            <TextField fx:id="sumoPathField" promptText="Path to sumo or sumo-gui"/>
+            
+            <Label text="Configuration File:"/>
+            <TextField fx:id="configPathField" promptText="Path to .sumocfg file"/>
+            
+            <Button fx:id="connectButton" text="Connect to SUMO" 
+                    onAction="#handleConnect" maxWidth="Infinity"/>
+            
+            <!-- Simulation Control Section -->
+            <Label text="Simulation Control" styleClass="section-title">
+                <VBox.margin>
+                    <Insets top="20"/>
+                </VBox.margin>
+            </Label>
+            <Separator/>
+            
+            <HBox spacing="5">
+                <Button fx:id="startButton" text="Start" 
+                        onAction="#handleStart" prefWidth="90"/>
+                <Button fx:id="pauseButton" text="Pause" 
+                        onAction="#handlePause" prefWidth="90"/>
+                <Button fx:id="stopButton" text="Stop" 
+                        onAction="#handleStop" prefWidth="90"/>
+            </HBox>
+            
+            <!-- Simulation Info Section -->
+            <Label text="Simulation Info" styleClass="section-title">
+                <VBox.margin>
+                    <Insets top="20"/>
+                </VBox.margin>
+            </Label>
+            <Separator/>
+            
+            <HBox spacing="10">
+                <Label text="Time:"/>
+                <Label fx:id="simulationTimeLabel" text="0.00 s" 
+                       styleClass="info-label"/>
+            </HBox>
+            
+            <HBox spacing="10">
+                <Label text="Vehicles:"/>
+                <Label fx:id="vehicleCountLabel" text="0" 
+                       styleClass="info-label"/>
+            </HBox>
+            
+            <!-- Vehicle List Section -->
+            <Label text="Active Vehicles" styleClass="section-title">
+                <VBox.margin>
+                    <Insets top="20"/>
+                </VBox.margin>
+            </Label>
+            <Separator/>
+            
+            <ListView fx:id="vehicleListView" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </left>
+    
+    <!-- Center Visualization Area -->
+    <center>
+        <StackPane styleClass="visualization-area">
+            <Pane fx:id="simulationCanvas" styleClass="canvas-container">
+                <!-- Canvas for rendering simulation will be added here -->
+            </Pane>
+        </StackPane>
+    </center>
+    
+    <!-- Bottom Status Bar -->
+    <bottom>
+        <HBox spacing="20" styleClass="status-bar">
+            <padding>
+                <Insets top="5" right="10" bottom="5" left="10"/>
+            </padding>
+            <Label text="Status: Ready"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="SUMO Traffic GUI v1.0.0"/>
+        </HBox>
+    </bottom>
+</BorderPane>

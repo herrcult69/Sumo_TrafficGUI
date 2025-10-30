@@ -1,0 +1,33 @@
+{
+  "application": {
+    "name": "SUMO Traffic GUI",
+    "version": "1.0.0",
+    "description": "Interactive GUI for SUMO Traffic Simulation"
+  },
+  "sumo": {
+    "executable": "sumo",
+    "guiExecutable": "sumo-gui",
+    "defaultPort": 8813,
+    "defaultHost": "localhost"
+  },
+  "simulation": {
+    "stepDelay": 100,
+    "defaultStepLength": 1.0,
+    "autoStart": false,
+    "autoReconnect": true
+  },
+  "visualization": {
+    "canvasWidth": 1000,
+    "canvasHeight": 600,
+    "vehicleSize": 20,
+    "defaultZoom": 1.0,
+    "backgroundColor": "#1a1a1a",
+    "vehicleColor": "#0066cc",
+    "roadColor": "#666666"
+  },
+  "logging": {
+    "level": "INFO",
+    "logToFile": false,
+    "logFilePath": "logs/application.log"
+  }
+}
