@@ -2,8 +2,9 @@ package com.sumo.trafficgui.service;
 
 import com.sumo.trafficgui.model.SimulationState;
 import com.sumo.trafficgui.model.Vehicle;
-import de.tudresden.sumo.cmd.Vehicle.*;
-import de.tudresden.ws.container.SumoStringList;
+// NOTE: TraaS imports commented out until library is installed
+// import de.tudresden.sumo.cmd.Vehicle.*;
+// import de.tudresden.ws.container.SumoStringList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

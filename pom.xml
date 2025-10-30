@@ -39,11 +39,16 @@
         </dependency>
 
         <!-- TraaS (TraCI as a Service) for SUMO integration -->
+        <!-- NOTE: TraaS is not available in Maven Central. 
+             See DEPENDENCIES.md for installation instructions.
+             This dependency is commented out to allow initial project setup. -->
+        <!--
         <dependency>
             <groupId>de.tudresden.sumo</groupId>
             <artifactId>traas</artifactId>
             <version>1.15.0</version>
         </dependency>
+        -->
 
         <!-- Logging -->
         <dependency>
